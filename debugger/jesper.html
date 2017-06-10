@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>rBEA debugger</title>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="codemirror-5.21.0/lib/codemirror.css">
+  <link rel="stylesheet" href="jesper.css">
+</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+        <script src="codemirror-5.21.0/lib/codemirror.js"></script>
+        <script src="codemirror-5.21.0/mode/groovy/groovy.js"></script>
+        <script src="codemirror-5.21.0/addon/selection/active-line.js"></script>
+        <textarea name="Code" id="codeTextArea" cols="40" rows="20"></textarea>
+      </div>
+        <div class="col-md-4">
+          <div class="row">
+            <label for="curLineText">Current line:</label>
+            <p id="curLineText"></textarea>
+          </div>
+          <div class="row">
+            <label for="curSourceText">File:</label>
+            <p id="curSourceText"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+            <button id="startVmBtn" type="button" class="btn btn-default btn-space">Init</button>
+            <button id="runVmBtn" type="button" class="btn btn-default btn-space">Run</button>
+            <button id="stepVmBtn" type="button" class="btn btn-default btn-space">Step</button>
+            <button id="stepIntoVmBtn" type="button" class="btn btn-default btn-space">Step into</button>
+            <button id="exitVmBtn" type="button" class="btn btn-default btn-space">Exit</button>
+            <input id="breakpointInput" type="text"></input>
+            <button id="setBreakpointsBtn" type="button" class="btn btn-default btn-space">Set breakpoints</button>
+      </div>
+
+  <div class="form-group row">
+    <div class="col-md-2">
+      <label for="statusTextArea">Status</label>
+    <textarea id="statusTextArea" class="form-control" rows="20"></textarea>
+  </div>
+
+    <div class="col-md-2">
+      <label for="watchpointTextArea">Watchpoints</label>
+    <textarea id="watchpointTextArea" class="form-control" rows="20"></textarea>
+  </div>
+
+  <div class="col-md-2">
+    <label for="stackTextArea">Stack</label>
+    <textarea id="stackTextArea" class="form-control" rows="20"></textarea>
+  </div>
+
+  <div class="col-md-2">
+    <label for="rBEATextArea">Context</label>
+    <textarea id="rBEATextArea" class="form-control" rows="20"></textarea>
+  </div>
+
+  <div class="col-md-2">
+    <label for="rBEALocalStatesArea">Local states</label>
+    <textarea id="rBEALocalStatesArea" class="form-control" rows="20"></textarea>
+  </div>
+</div>
+
+<div id="messages"></div>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jesper.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.line-error {
+    background: #FBC2C4;
+    color: #8a1f11;
+}
+
+.line-current {
+  background: #66ccff;
+  color: #0066ff;
+}
+
+body {
+  padding-top: 0rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+textarea {
+  padding: 0rem;
+}
+
+.btn-space {
+    margin-right: 3px;
+}
